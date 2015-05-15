@@ -88,7 +88,6 @@ class Solver:
     return (y0, t0)
 
   def __integrate_step(self, current_time):
-    print current_time
     self.ode_solver.integrate(current_time)
     if not self.ode_solver.successful():
       raise RuntimeError('The solver encountered a problem at ' + str(current_time))

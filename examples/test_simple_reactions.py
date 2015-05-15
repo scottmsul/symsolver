@@ -1,9 +1,12 @@
-from variables import Variables
-from solver import Solver
 import numpy as np
 import matplotlib.pyplot as pl
 from sympy import *
 from processes import hydrogen
+
+import sys
+sys.path.append('../symsolver')
+from variables import Variables
+from solver import Solver
 
 time = ('t', np.logspace(5.0,30.0,1000))
 dependents = [('HI', 0.5), ('HII', 0.5), ('e', 0.5)]

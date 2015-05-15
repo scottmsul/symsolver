@@ -1,8 +1,11 @@
-from variables import Variables
-from solver import Solver
 import numpy as np
 import matplotlib.pyplot as pl
 from sympy import *
+
+import sys
+sys.path.append('../symsolver/')
+from variables import Variables
+from solver import Solver
 
 time = ('t', np.logspace(1.0,3.0,1000))
 dependents = [('x', 1.0)]
